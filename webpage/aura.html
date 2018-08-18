@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>AURA</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="dist/jquery.convform.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="demo.css">
+</head>
+<body>
+<section id="demo">
+    <div class="vertical-align">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6 col-sm-offset-3 col-xs-offset-0">
+                    <div class="card no-border">
+                        <div id="chat">
+                            <form action="" method="GET" class="hidden">
+                                <select data-conv-question="안녕! 나는 AURABOT이야, 퀴즈 맞추는걸 좋아해." name="first-question">
+                                    <option value="understood">알겠어.</option>
+                                    <option value="okay">나도 좋아해!</option>
+                                </select>
+                                <input type="text" name="name" data-conv-question="좋아! 그럼 먼저 이름을 알려줘.|그럼 네 이름을 먼저 알려줄 수 있을까?.">
+                                <select data-conv-question="우와!, {name}:0! 만나서 반가워.">
+                                    <option value="understood">나도</option>
+                                    <option value="okay">반가워 아우라봇!</option>
+                                </select>
+                                <!--# add deep chat Here-->
+                                <select data-conv-question="우리 웹사이트에 들러볼래?">
+                                <!--<select name="multi[]" data-conv-question="우리 웹사이트에 들러볼래?" multiple>-->
+                                    <option value="응." data-callback="visit">응.</option>
+                                    <option value="완전 좋아!!" data-callback="visit">완전 좋아!!</option>
+                                    <option value="됐어." data-callback="dont">됐어.</option>
+                                </select>
+
+                                <input type="text" data-conv-question="잘가! 만나서 반가웠어 ꒰✩’ω`ૢ✩꒱!!" data-no-answer="true">
+                                <input type="text" data-conv-question="내가 떠나면 채팅창이 초기화될거야.">
+                                <input type="text" data-conv-question="5" data-no-answer="true">
+                                <input type="text" data-conv-question="4" data-no-answer="true">
+                                <input type="text" data-conv-question="3" data-no-answer="true">
+                                <input type="text" data-conv-question="2" data-no-answer="true">
+                                <input type="text" data-conv-question="1" data-no-answer="true">
+                                <input type="text" data-conv-question="0" data-no-answer="true">
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<script type="text/javascript" src="jquery-1.12.3.min.js"></script>
+<script type="text/javascript" src="dist/autosize.min.js"></script>
+<script type="text/javascript" src="dist/jquery.convform.js"></script>
+
+<script>
+    function visit() {
+        window.open("https://www.ai-lab.kr/labs/aura-raebjang-gimhyeonu");
+    }
+    function dont() {
+    }
+
+    // function DeepBot(){
+    // }
+</script>
+
+<script>
+    jQuery(function($){
+        var convForm = $('#chat').convform();
+        console.log(convForm);
+    });
+</script>
+
+
+</body>
+</html>

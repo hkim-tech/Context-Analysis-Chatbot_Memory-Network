@@ -102,3 +102,8 @@ venv.bak/
 
 # mypy
 .mypy_cache/
+
+#other
+webpage/api_example1.html
+webpage/api_example2.html
+webpage/.idea
