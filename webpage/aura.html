@@ -29,13 +29,11 @@
                                 </select>
                                 <!--# add deep chat Here-->
                                 <select data-conv-question="우리 웹사이트에 들러볼래?">
-                                <!--<select name="multi[]" data-conv-question="우리 웹사이트에 들러볼래?" multiple>-->
                                     <option value="응." data-callback="visit">응.</option>
                                     <option value="완전 좋아!!" data-callback="visit">완전 좋아!!</option>
-                                    <option value="됐어." data-callback="dont">됐어.</option>
+                                    <option value="됐어.">됐어.</option>
                                 </select>
-
-                                <input type="text" data-conv-question="잘가! 만나서 반가웠어 ꒰✩’ω`ૢ✩꒱!!" data-no-answer="true">
+                                <input type="text" data-conv-question="나 이만 가봐야해. 만나서 반가웠어 ꒰✩’ω`ૢ✩꒱!!" data-no-answer="true">
                                 <input type="text" data-conv-question="내가 떠나면 채팅창이 초기화될거야.">
                                 <input type="text" data-conv-question="5" data-no-answer="true">
                                 <input type="text" data-conv-question="4" data-no-answer="true">
@@ -59,8 +57,8 @@
     function visit() {
         window.open("https://www.ai-lab.kr/labs/aura-raebjang-gimhyeonu");
     }
-    function dont() {
-    }
+    // function dont() {
+    // }
 
     // function DeepBot(){
     // }
