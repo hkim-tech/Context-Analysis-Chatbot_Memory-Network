@@ -62,7 +62,6 @@ def deepChat():
     answer = answers[0]
     return template('{{answer}}', answer=answer)
 
-
 print("All applications configured")
 
 # Launch the BottlePy dev server 
