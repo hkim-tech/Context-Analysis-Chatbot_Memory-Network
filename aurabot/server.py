@@ -55,12 +55,12 @@ def index():
         return """<html><body>Nothing to see here... move along now.
         Or, create an index.html file.</body></html>"""
 
-# @route('/chat/<answer>', method=['GET','POST'])
-# def deepChat():
-#     print('called')
-#     # for answer in answers:
-#     answer = answers[0]
-#     return template('{{answer}}', answer=answer)
+@route('/chat/<answer>', method=['GET','POST'])
+def deepChat():
+    print('called')
+    # for answer in answers:
+    answer = answers[0]
+    return template('{{answer}}', answer=answer)
 
 
 print("All applications configured")
