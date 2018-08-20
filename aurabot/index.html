@@ -18,16 +18,14 @@
                     <div class="card no-border">
                         <div id="chat">
                             <form action="" method="GET" class="hidden">
-                                <select data-conv-question="안녕! 나는 AURABOT이야, 퀴즈 맞추는걸 좋아해." name="first-question">
-                                    <option value="understood">알겠어.</option>
-                                    <option value="okay">나도 좋아해!</option>
-                                </select>
-                                <input type="text" name="name" data-conv-question="좋아! 그럼 먼저 이름을 알려줘.|그럼 네 이름을 먼저 알려줄 수 있을까?.">
-                                <select data-conv-question="우와!, {name}:0! 만나서 반가워.">
-                                    <option value="understood">나도</option>
-                                    <option value="okay">반가워 아우라봇!</option>
-                                </select>
+                                <input type="text" data-conv-question="안녕! 나는 AURABOT이야, 나는 인사, 자기소개, 팀 아우라 소개를 할 수 있어 ✌!" name="first-question">
+                                <input type="text" name="name" data-conv-question="응! 넌 이름이 뭐야?.|그럼 네 이름을 먼저 알려줄 수 있을까?.">
+                                <input type="text"  data-conv-question="우와!, {name}:0!.">
                                 <!--# add deep chat Here-->
+                                <!--<form action="/chat" method="post">-->
+                                    <!--<input type="text"  data-conv-question="answer">-->
+                                <!--</form>-->
+                                <!--<input type="text"  data-conv-question={{answer}}>-->
                                 <select data-conv-question="우리 웹사이트에 들러볼래?">
                                     <option value="응." data-callback="visit">응.</option>
                                     <option value="완전 좋아!!" data-callback="visit">완전 좋아!!</option>
@@ -57,12 +55,6 @@
     function visit() {
         window.open("https://www.ai-lab.kr/labs/aura-raebjang-gimhyeonu");
     }
-<<<<<<< HEAD
-    // function dont() {
-    // }
-
-=======
->>>>>>> 6ecf71acd5c62b188c241e55f609a8af4bc70bf4
     // function DeepBot(){
     // }
 </script>
@@ -73,7 +65,6 @@
         console.log(convForm);
     });
 </script>
-
 
 </body>
 </html>
