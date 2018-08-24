@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+      <meta http-equiv="X-UA-Compatible" content="ie=edge">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+      <title>Chat</title>
+      <link rel="stylesheet" href="css/style.css">
+   </head>
+   <body class="body-chat" style="background-color: #a1c0d6">
+      <header class="top-header chat-header">
+         <div class="header__top">
+            <div class="header__column">
+               <i class="fa fa-signal"> Aura</i>
+               <i class="fa fa-wifi"></i>
+            </div>
+            <div class="header__column">
+               <span class="header__time" clonekey="clock">18:38</span>
+            </div>
+            <div class="header__column">
+               <span class="header__battery">100% <i class="fa fa-battery-full"></i></span>
+            </div>
+         </div>
+         <div class="header__bottom">
+            <div class="header__column">
+               <a href="chats.html">
+               <i class="fa fa-chevron-left fa-lg"></i>
+               </a>
+            </div>
+            <div class="header__column">
+               <span class="header__text">AURA</span>
+            </div>
+            <div class="header__column">
+               <!-- <i class="fa fa-search"></i> -->
+               <i class="fa fa-heartbeat"></i>
+            </div>
+         </div>
+      </header>
+      <main class="chat" clonekey="chatList" style="padding-bottom: 45px;">
+      <div class="date-divider">
+         <span class="date-divider__text" clonekey="chat_time">Wednesday, August 2, 2017</span>
+      </div>
+      <div class="chat__message chat__message-from-me ct_hide" clonekey="me" clonesample>
+         <span class="chat__message-time" clonekey="time">17:55</span>
+         <span class="chat__message-body" clonekey="message">
+         Hello! This is a test message.
+         </span>
+      </div>
+      <div class="chat__message chat__message--to-me ct_hide" clonekey="bot" clonesample>
+         <img src="/images/aura.jpg" class="chat__message-avatar">
+         <div class="chat__message-center">
+            <h3 class="chat__message-username" clonekey="bot_name">Lynn</h3>
+            <span class="chat__message-body" clonekey="message">
+            And this is an answer
+            </span>
+         </div>
+         <span class="chat__message-time" clonekey="time">19:35</span>
+      </div>
+      <div class="type-message">
+         <span id="mic" style="cursor: pointer; width:36px;height:36px;display: inline-block;text-align: center;line-height: 36px;background-color: #ffe934;margin-right: 5px;margin-left: -5px;color: #523737;">
+         <i class="fa fa-microphone fa-lg"></i>
+         </span>
+         <div class="type-message__input">
+            <input type="text" clonekey="input">
+            <!-- <i class="fa fa-smile-o fa-lg"></i> -->
+            <span class="record-message" clonekey="button">
+            <i class="fa fa-paper-plane"></i>
+            </span>
+         </div>
+      </div>
+      <div class="bigScreenText" id="recoding">
+         <span><i class="fa fa-microphone fa-lg"></i></span>
+      </div>
+      <!-- <textarea id="note-textarea" style="display: none1;"></textarea>
+         <p id="recording-instructions" style="display: none;"></p> -->
+   </body>
+
+   <script
+      src="https://code.jquery.com/jquery-3.3.1.min.js"
+      integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+      crossorigin="anonymous"></script>
+
+   <script>
+      var Chatter = (function(){
+      function Chatter(param){
+        this.botName = param.botName;
+        this.sendEvent = param.sendEvent;
+      
+        this.init();
+      }
+      Chatter.prototype.init = function(param){
+        var chatter = this;
+        var nowDate = new Date();
+        var day = ['일', '월', '화', '수', '목', '금', '토'];
+        $('[clonekey="chat_time"]').html(nowDate.getFullYear() + '년 ' + (nowDate.getMonth() + 1) + '월 ' + nowDate.getDate() + '일 ' + day[nowDate.getDay()] + '요일');
+        $('[clonekey="bot_name"]').html(chatter.botName);
+      
+        $('[clonekey="clock"]').html(getNowTimeStamp());
+        setInterval(function() {
+          $('[clonekey="clock"]').html(getNowTimeStamp());
+        }, 5000);
+      
+        $('[clonekey="input"]').on('keyup', function(event){
+          var message = $(this).val();
+          if(event.keyCode === 13 && message !== ''){ // enter
+            $(this).val('');
+      
+            chatter.addMyMessage({
+              message : message
+            });
+            // if(typeof chatter.sendEvent === 'function'){
+            //   chatter.sendEvent(message);
+            // }
+          }
+        });
+        $('[clonekey="button"]').on('click', function(event){
+          var message = $('[clonekey="input"]').val();
+          if(typeof chatter.sendEvent === 'function' && message !== ''){
+            $('[clonekey="input"]').val('');
+      
+            chatter.addMyMessage({
+              message : message
+            });
+          }
+        });
+      };
+      Chatter.prototype.addMyMessage = function(param){
+        var chatter = this;
+        var message = param.message;
+        chatter.addMessageElement({
+          type : 'me',
+          message : message
+        });
+        if(typeof chatter.sendEvent === 'function'){
+          chatter.sendEvent(message);
+        }
+      };
+      Chatter.prototype.addBotMessage = function(param){
+        var chatter = this;
+        var message = param.message;
+        chatter.addMessageElement({
+          type : 'bot',
+          message : message
+        });
+      }
+      Chatter.prototype.addMessageElement = function(param){
+        var type = param.type;
+        var message = param.message;
+        var element = null;
+        if(type === 'me'){
+          element = $('[clonekey="me"][clonesample]').clone();
+        }
+        else{ // type === 'bot'
+          element = $('[clonekey="bot"][clonesample]').clone();
+        }
+        element.removeAttr('clonesample').removeClass('ct_hide');
+        element.find('[clonekey="message"]').html(message);
+      
+        var date = new Date();
+        var hours = date.getHours();
+        var minutes = date.getMinutes();
+        var ampm = hours < 12 ? '오전' : '오후';
+        hours = hours === 0 ? 12 : hours;
+        hours = hours > 12 ? hours - 12 : hours;
+        minutes = minutes < 10 ? '0' + minutes : minutes;
+        element.find('[clonekey="time"]').html(getNowTimeStamp());
+      
+        $('[clonekey="chatList"]').append(element).scrollTop($('[clonekey="chatList"]').height());
+      };
+      function getNowTimeStamp(){
+        var date = new Date();
+        var hours = date.getHours();
+        var minutes = date.getMinutes();
+        var ampm = hours < 12 ? '오전' : '오후';
+        hours = hours === 0 ? 12 : hours;
+        hours = hours > 12 ? hours - 12 : hours;
+        minutes = minutes < 10 ? '0' + minutes : minutes;
+        return ampm + ' ' + hours + ':' + minutes;
+      }
+      return Chatter;
+      })();
+      var chatter;
+      var main = function(){
+      chatter = new Chatter({
+        botName : 'AURA',
+        sendEvent : function(message){
+          console.log(message);
+          var requestBody = {
+            message: message
+          };
+          // rest call
+          $.ajax({
+              url: '/chat',
+              type: 'post',
+              dataType: 'json',
+              contentType: 'application/json',
+              success: function (data) {
+                  var responseMessage = data.msg;
+                  chatter.addBotMessage({
+                    message: responseMessage
+                  });
+              },
+              data: JSON.stringify(requestBody)
+          });
+        }
+      });
+      // chatter.addMyMessage({
+      //   message: 'test message'
+      // });
+      // chatter.addBotMessage({
+      //   message: 'test message'
+      // });
+      };
+      main();
+      
+      var errorCallback = function(e) {
+        console.log('Reeeejected!', e);
+      };
+        
+      window.AudioContext = window.AudioContext || window.webkitAudioContext;
+      
+      var context = new AudioContext();
+      
+      navigator.getUserMedia({audio: true}, function(stream) {
+        var microphone = context.createMediaStreamSource(stream);
+        var filter = context.createBiquadFilter();
+      
+        // microphone -> filter -> destination.
+        microphone.connect(filter);
+        filter.connect(context.destination);
+      }, errorCallback);
+      
+      try {
+        var SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+        var recognition = new SpeechRecognition();
+      }
+      catch(e) {
+        console.error(e);
+      }
+      
+      var noteContent = '';
+      recognition.continuous = false; 
+      recognition.onresult = function(event) {
+      
+        var current = event.resultIndex;
+        var transcript = event.results[current][0].transcript;
+        var mobileRepeatBug = (current == 1 && transcript == event.results[0][0].transcript);
+      
+        if(!mobileRepeatBug) {
+          noteContent += transcript;
+          chatter.addMyMessage({
+          message: noteContent
+        });
+        }
+      };
+      
+      $('#mic').on('click', function(e) {
+        noteContent = ''
+        if (noteContent.length) {
+          noteContent += ' ';
+        }
+        recognition.start();
+      });
+
+      recognition.onstart = function() { 
+        $('#recoding').addClass('show');
+      }
+
+      recognition.onspeechend = function() {
+        $('#recoding').removeClass('show');
+      }
+   </script>
+</html>

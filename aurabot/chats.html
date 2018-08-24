@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <title>Chats</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="top-header">
+    <div class="header__top">
+      <div class="header__column">
+        <i class="fa fa-signal"> Aura</i>
+        <i class="fa fa-wifi"></i>
+      </div>
+      <div class="header__column">
+        <span class="header__time" clonekey="clock">18:38</span>
+      </div>
+      <div class="header__column">
+        <span class="header__battery">100% <i class="fa fa-battery-full"></i></span>
+      </div>
+    </div>
+    <div class="header__bottom">
+      <div class="header__column">
+      </div>
+      <div class="header__column">
+        <span class="header__text">채팅</span>
+      </div>
+      <div class="header__column">
+
+      </div>
+    </div>
+  </header>
+  <main class="chats">
+    <div class="search-bar">
+      <i class="fa fa-search"></i>
+      <input type="text" placeholder="자연어처리 :: Natural Language Processing">
+    </div>
+    <ul class="chats__list">
+      <li class="chats__chat">
+        <a href="/profiles/khw.html">
+          <div class="chat__content">
+            <img src="images/khw.jpg">
+            <div class="chat__preview">
+              <h3 class="chat__user">김현우 (Austin)</h3>
+              <span class="chat__last-message">입장시 자동으로 김현우님의 프로필로 이동하게 됩니다.</span>
+            </div>
+          </div>
+          <span class="chat__date-time" clonekey="clock">
+            15:55
+          </span>
+        </a>
+      </li>
+      <li class="chats__chat">
+        <a href="/profiles/mh.html">
+          <div class="chat__content">
+            <img src="images/mh.jpg">
+            <div class="chat__preview">
+              <h3 class="chat__user">민홍</h3>
+              <span class="chat__last-message">입장시 자동으로 민홍님의 프로필로 이동하게 됩니다.</span>
+            </div>
+          </div>
+          <span class="chat__date-time" clonekey="clock">
+            15:55
+          </span>
+        </a>
+      </li>
+      <li class="chats__chat">
+        <a href="/profiles/psh.html">
+          <div class="chat__content">
+            <img src="images/psh.jpg">
+            <div class="chat__preview">
+              <h3 class="chat__user">박산희</h3>
+              <span class="chat__last-message">입장시 자동으로 박산희님의 프로필로 이동하게 됩니다.</span>
+            </div>
+          </div>
+          <span class="chat__date-time" clonekey="clock">
+            15:55
+          </span>
+        </a>
+      </li>
+      <li class="chats__chat">
+        <a href="">
+          <div class="chat__content">
+            <img src="images/avatar.png">
+            <div class="chat__preview">
+              <h3 class="chat__user">유연수</h3>
+              <span class="chat__last-message">정보가 없습니다.</span>
+            </div>
+          </div>
+          <span class="chat__date-time" clonekey="clock">
+            15:55
+          </span>
+        </a>
+      </li>
+      <li class="chats__chat">
+        <a href="/profiles/jeg.html">
+          <div class="chat__content">
+            <img src="images/jeg.jpg">
+            <div class="chat__preview">
+              <h3 class="chat__user">전은광</h3>
+              <span class="chat__last-message">입장시 자동으로 전은광님의 프로필로 이동하게 됩니다.</span>
+            </div>
+          </div>
+          <span class="chat__date-time" clonekey="clock">
+            15:55
+          </span>
+        </a>
+      </li>
+      <li class="chats__chat">
+        <a href="/profiles/hgi.html">
+          <div class="chat__content">
+            <img src="images/hgi.jpg">
+            <div class="chat__preview">
+              <h3 class="chat__user">홍권일</h3>
+              <span class="chat__last-message">입장시 자동으로 홍권일님의 프로필로 이동하게 됩니다.</span>
+            </div>
+          </div>
+          <span class="chat__date-time" clonekey="clock">
+            15:55
+          </span>
+        </a>
+      </li>
+    </ul>
+    <div class="chat-btn" style="cursor: pointer" onclick="location.href='/chat.html'">
+      <i class="fa fa-android fa-lg"></i>
+    </div>
+  </main>
+  <nav class="tab-bar">
+    <a href="index.html" class="tab-bar__tab">
+      <i class="fa fa-users"></i>
+      <span class="tab-bar__title">랩장/연구원</span>
+    </a>
+    <a href="chats.html" class="tab-bar__tab tab-bar__tab--selected">
+      <i class="fa fa-comment"></i>
+      <span class="tab-bar__title">채팅</span>
+    </a>
+    <a href="more.html" class="tab-bar__tab">
+      <i class="fa fa-ellipsis-h"></i>
+      <span class="tab-bar__title">더보기</span>
+    </a>
+  </nav>
+  <!-- <div class="bigScreenText">
+    <span>Please make your screen smaller</span>
+  </div> -->
+  <script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+  <script>
+      function getNowTimeStamp(){
+        var date = new Date();
+        var hours = date.getHours();
+        var minutes = date.getMinutes();
+        var ampm = hours < 12 ? '오전' : '오후';
+        hours = hours === 0 ? 12 : hours;
+        hours = hours > 12 ? hours - 12 : hours;
+        minutes = minutes < 10 ? '0' + minutes : minutes;
+        return ampm + ' ' + hours + ':' + minutes;}
+        $('[clonekey="clock"]').html(getNowTimeStamp());
+        setInterval(function(){
+          $('[clonekey="clock"]').html(getNowTimeStamp());
+        }, 5000)
+   </script>
+</body>
+</html>

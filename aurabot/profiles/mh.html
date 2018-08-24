@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <title>Profile</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <header class="top-header top-header--transparent">
+    <div class="header__top">
+      <div class="header__column">
+        <i class="fa fa-signal"> Aura</i>
+        <i class="fa fa-wifi"></i>
+      </div>
+      <div class="header__column">
+        <span class="header__time" id="clock">18:38</span>
+      </div>
+      <div class="header__column">
+        <span class="header__battery">100% <i class="fa fa-battery-full"></i></span>
+      </div>
+    </div>
+    <div class="header__bottom">
+      <div class="header__column">
+        <a href="../index.html">
+          <i class="fa fa-times fa-lg"></i>
+        </a>
+      </div>
+      <div class="header__column">
+
+      </div>
+      <div class="header__column">
+      </div>
+    </div>
+  </header>
+  <main class="profile">
+    <header class="profile__header mh" style="height: 63vh;">
+      <div class="profile__header-container">
+        <img src="../images/mh.jpg" alt="">
+        <h3 class="profile__header-title">민홍</h3>
+      </div>
+    </header>
+    <div class="profile__container">
+    <div type="text" style="margin-bottom: 25px;">
+        <a href="http://mail.google.com">mimmh93@gmail.com</a>
+    </div>
+      <div class="profile__actions">
+        <div class="profile__action" onclick="location.href=''">
+          <span class="profile__action-circle">
+              <i class="fa fa-facebook-official fa-lg"></i>
+          </span>
+          <span class="profile__action-title">페이스북</span>
+        </div>
+        <div class="profile__action" onclick="location.href='https://open.kakao.com/o/snGtzjW'">
+          <span class="profile__action-circle">
+              <i class="fa fa-link fa-lg"></i>
+          </span>
+          <span class="profile__action-title">카카오톡</span>
+        </div>
+      </div>
+    </div>
+  </main>
+  <!-- <div class="bigScreenText">
+    <span>Please make your screen smaller</span>
+  </div> -->
+  <script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+  <script>
+      function getNowTimeStamp(){
+        var date = new Date();
+        var hours = date.getHours();
+        var minutes = date.getMinutes();
+        var ampm = hours < 12 ? '오전' : '오후';
+        hours = hours === 0 ? 12 : hours;
+        hours = hours > 12 ? hours - 12 : hours;
+        minutes = minutes < 10 ? '0' + minutes : minutes;
+        return ampm + ' ' + hours + ':' + minutes;}
+        $("#clock").html(getNowTimeStamp());
+        setInterval(function(){
+          $("#clock").html(getNowTimeStamp());
+        }, 5000)
+   </script>
+</body>
+</html>
