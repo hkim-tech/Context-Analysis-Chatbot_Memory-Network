@@ -1,8 +1,8 @@
 # aurabot / 맥락 분석 챗봇
 한국인공지능연구소 1기 / 자연어처리 / AURA 팀
 
-아우라봇 링크: <https://aurabot.herokuapp.com>
-- 데이터 학습 시간이 오래걸려  heroku boot timeout으로 인하여 Crashed 되었으니 이 점 참고하여 소스를 Clone 받으시고 직접 실행 시켜주시기 바랍니다.
+데이터 학습 시간이 오래걸려  heroku boot timeout으로 인하여 Crashed 되었으니 이 점 참고하여 소스를 Clone 받으시고 직접 실행 시켜주시기 바랍니다.
+- 아우라봇 링크: <https://aurabot.herokuapp.com>
 
 # 연구 배경
 한국인공지능연구소 1기 마지막 발표에서 자연어 처리로 팀원 모두 합심하여 할 수 있는 것을 찾던 중 챗봇을 처음부터 끝까지 만들어 보면 어떨까 하는 생각에서 이번 발표 주제를 챗봇으로 선정하였습니다.
