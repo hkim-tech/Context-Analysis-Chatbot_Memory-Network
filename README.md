@@ -20,7 +20,7 @@ Korea Artificial Intelligence Laboratory 1st / Natural Language Processing / Tea
 </div>
 <div>
   <p>
-**AuraBot is the name of this project chatbot.**
+__AuraBot is the name of this project chatbot.__
     
 - 아우라봇 링크 / AuraBot Link: <https://aurabot.herokuapp.com>
 - 발표자료 링크 / Powerpoint(pdf) Link: https://drive.google.com/open?id=1ipDY8ybgZ-iJGok4qqr9AaWIEK4atz_l
