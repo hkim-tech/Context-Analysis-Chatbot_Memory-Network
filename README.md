@@ -1,5 +1,5 @@
 # Context-Analysis-Chatbot_Memory-Network / 맥락 분석 챗봇
-한국인공지능연구소 1기 / 자연어처리 / AURA 팀
+한국인공지능연구소 1기 / 자연어처리 / AURA 팀<br>
 Korea Artificial Intelligence Laboratory 1st / Natural Language Processing / Team AURA
 
 <strong>현재 서버에 올라와 있는 앱은 학습모델이 적용이 되어있지 않습니다.</strong>
