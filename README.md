@@ -4,9 +4,11 @@
 Korea Artificial Intelligence Laboratory 1st / Natural Language Processing / Team AURA
 </div>
 <div>
+  <p>
 <strong>현재 서버에 올라와 있는 앱은 학습모델이 적용이 되어있지 않습니다.</strong>
 데이터 학습 시간이 오래걸려  heroku boot timeout으로 인하여 Crashed 되었으니 이 점 참고하여 소스를 Clone 받으시고 직접 실행 시켜주시기 바랍니다.
 (aurabot보다 aurabot_save에서 server.py를 실행시키는 것이 더 빠릅니다.)
+      </p>
 </div>
 <div>
 <strong>Apps that are currently on the server are not covered by the learning model.<strong> Since the data learning time is long and it has been crashed due to heroku boot timeout, please clone the source and execute it manually. (It is faster to run server.py in aurabot_save folder than aurabot folder.)
