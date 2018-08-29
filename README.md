@@ -45,19 +45,33 @@ The chatbots that have been studied in this study are based on the memory networ
 ## Technology / 기술 설명
 메모리 네트워크는 데이터를 메모리에 저장하여 맥락을 이해하여 질문에 대한 답을 하는 방식으로 사용자의 질문을 이용하여 맥락 정보를 선택하는 스토리 선택 모듈과 선택된 스토리 정보와 질문 정보로 답변을 선택하는 탑변 선택 모듈로 구성되어 있습니다.
 
-이러한 단일 메모리 네트워크가 여러 개로 구성된 형태로 답변을 예측하여 이번 연구에서는 3개의 멀티 레이어 구조의 메모리 네트워크로 연구를 진행하려 합니다.
+A memory network is a way of storing data in memory, understanding the context and answering questions. This chatbot consists of a story selection module that selects context information using the user's question and an answer selection module that selects the answer with selected story information and question information.
+
+이러한 단일 메모리 네트워크가 여러 개로 구성된 형태로 답변을 예측하여 이번 연구에서는 3개의 멀티 레이어 구조의 메모리 네트워크로 연구를 진행되었습니다.
+
+In order to predict responses in the form of multiple single memory networks, this research has been conducted with three multi-layered memory networks.
 
 ## Research direction / 연구 방향
 2017년 창원 대학교의 메모리 네트워크를 이용한 End-to-End 방식의 레스토랑 예약 시스템에 착안하여 첫 질문은 맥락 없이 답변하고 그 이후 질문은 이전 질 을 맥락정보로 활용하여 답변하도록 데이터 셋을 구성하였습니다.
 
+In 2017, I settled on an end-to-end restaurant reservation system using the memory network of Changwon University. The first question was answered without context, and the subsequent question was composed of data to be answered by using the previous quality as context information.
+
 ## Research scope / 연구 범위
 본 연구에서는 데이터 구성부터 클라이언트 구현까지 챗봇 구성을 위한 모든 프로세스를 다루며, 맥락을 이해하여 답변하는 End-to-End 챗봇의 Prototype 구현을 목적으로 합니다.
+
+This study covers all processes for configuring chatbot from data configuration to client implementation and aims at implementing prototype of end-to-end chatbot that understands the context and answers.
 
 ## Model structure / 모델 구조
 
 - 서버 파트: 서버 파트에서는 메모리 네트워크를 통해 미리 정의된 데이터를 학습하고 준비하고 Bottle을 통해 클라이언트 파트에서 받은 질문에 대한 답변을 제시하는 역할을 합니다.
 
+- Server Part: The server part learns and prepares predefined data through the memory network and provides answers to questions received from the client parts through the bottle.
+
 - 클라이언트 파트: 클라이언트 파트는 사용자의 입력을 받아 서버 파트에 전달하고 서버 파트에서 예측된 답변을 화면에 노출해줍니다. 서버와 클라이언트 간에는 json 기반의 REST 통신으로 데이터를 전달합니다.
+
+- Client Part: The client part receives the user's input, passes it on to the server part, and exposes the expected response from the server part to the screen. It transfers data between server and client through json-based REST communication.
 
 <hr><br>
 본 프로젝트와 관련해 질문이 있으시면 hkim.tech@gmail.com으로 이메일 보내주시면 답장드리겠습니다.
+
+If you have any questions about this project, please email hkim.tech@gmail.com.
