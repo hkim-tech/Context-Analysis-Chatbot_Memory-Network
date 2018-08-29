@@ -71,7 +71,7 @@ This study covers all processes for configuring chatbot from data configuration 
 
 - Client Part: The client part receives the user's input, passes it on to the server part, and exposes the expected response from the server part to the screen. It transfers data between server and client through json-based REST communication.
 
-<hr><br>
+---
 본 프로젝트와 관련해 질문이 있으시면 hkim.tech@gmail.com으로 이메일 보내주시면 답장드리겠습니다.
 
 If you have any questions about this project, please email hkim.tech@gmail.com.
