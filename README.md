@@ -10,7 +10,7 @@
 
 # Screenshots
 <div>
-  ![default](https://user-images.githubusercontent.com/41403001/44778324-a1fedf00-abb7-11e8-8aea-085cd6249d16.JPG)
+  ![image](https://user-images.githubusercontent.com/41403001/44778324-a1fedf00-abb7-11e8-8aea-085cd6249d16.JPG)
 </div>
 
 # 연구 배경
