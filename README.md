@@ -11,7 +11,8 @@
 # Screenshots
 ![default](https://user-images.githubusercontent.com/41403001/44778524-29e4e900-abb8-11e8-9646-ce516b41419a.JPG)
 ![1](https://user-images.githubusercontent.com/41403001/44778580-5dc00e80-abb8-11e8-91d9-901fbfccc224.JPG)
-
+![3](https://user-images.githubusercontent.com/41403001/44778623-73cdcf00-abb8-11e8-9ab5-3e9521e98ca1.JPG)
+![2](https://user-images.githubusercontent.com/41403001/44778625-75979280-abb8-11e8-869d-4dd423a70c65.JPG)
 
 # 연구 배경
 한국인공지능연구소 1기 마지막 발표에서 자연어 처리로 팀원 모두 합심하여 할 수 있는 것을 찾던 중 챗봇을 처음부터 끝까지 만들어 보면 어떨까 하는 생각에서 이번 발표 주제를 챗봇으로 선정하였습니다.
