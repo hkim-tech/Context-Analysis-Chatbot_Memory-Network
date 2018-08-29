@@ -9,9 +9,7 @@
 - 한국인공지능연구소 1기 AURA 팀 링크: https://www.ai-lab.kr/labs/aura-raebjang-gimhyeonu
 
 # Screenshots
-<div>
-  ![image](https://user-images.githubusercontent.com/41403001/44778324-a1fedf00-abb7-11e8-8aea-085cd6249d16.JPG)
-</div>
+![default](https://user-images.githubusercontent.com/41403001/44778524-29e4e900-abb8-11e8-9646-ce516b41419a.JPG)
 
 # 연구 배경
 한국인공지능연구소 1기 마지막 발표에서 자연어 처리로 팀원 모두 합심하여 할 수 있는 것을 찾던 중 챗봇을 처음부터 끝까지 만들어 보면 어떨까 하는 생각에서 이번 발표 주제를 챗봇으로 선정하였습니다.
