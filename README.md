@@ -1,8 +1,10 @@
 # Context-Analysis-Chatbot_Memory-Network / 맥락 분석 챗봇
+  <p>
 <div>
 한국인공지능연구소 1기 / 자연어처리 / AURA 팀<br>
 Korea Artificial Intelligence Laboratory 1st / Natural Language Processing / Team AURA
 </div>
+  </p>
 <div>
   <p>
 <strong>현재 서버에 올라와 있는 앱은 학습모델이 적용이 되어있지 않습니다.</strong>
@@ -11,7 +13,9 @@ Korea Artificial Intelligence Laboratory 1st / Natural Language Processing / Tea
       </p>
 </div>
 <div>
+  <p>
 <strong>Apps that are currently on the server are not covered by the learning model.<strong> Since the data learning time is long and it has been crashed due to heroku boot timeout, please clone the source and execute it manually. (It is faster to run server.py in aurabot_save folder than aurabot folder.)
+  </p>
 </div>
 
 
