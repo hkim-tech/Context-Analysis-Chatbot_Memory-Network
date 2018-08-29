@@ -18,12 +18,14 @@ Korea Artificial Intelligence Laboratory 1st / Natural Language Processing / Tea
 <strong>Apps that are currently on the server are not covered by the learning model.</strong> Since the data learning time is long and it has been crashed due to heroku boot timeout, please clone the source and execute it manually. (It is faster to run server.py in aurabot_save folder than aurabot folder.)
   </p>
 </div>
-<p>
-AuraBot is the name of this project chatbot.<br>
-- 아우라봇 링크 / AuraBot Link: <https://aurabot.herokuapp.com><br>
-- 발표자료 링크 / Powerpoint(pdf) Link: https://drive.google.com/open?id=1ipDY8ybgZ-iJGok4qqr9AaWIEK4atz_l<br>
-- 한국인공지능연구소 1기 AURA 팀 링크 / Lab-Aura Team Link: https://www.ai-lab.kr/labs/aura-raebjang-gimhyeonu<br>
+<div>
+  <p>
+AuraBot is the name of this project chatbot.<br><br>
+- 아우라봇 링크 / AuraBot Link: <https://aurabot.herokuapp.com>
+- 발표자료 링크 / Powerpoint(pdf) Link: https://drive.google.com/open?id=1ipDY8ybgZ-iJGok4qqr9AaWIEK4atz_l
+- 한국인공지능연구소 1기 AURA 팀 링크 / Lab-Aura Team Link: https://www.ai-lab.kr/labs/aura-raebjang-gimhyeonu
     </p>
+  </div>
 # Screenshots
 ![default](https://user-images.githubusercontent.com/41403001/44778524-29e4e900-abb8-11e8-9646-ce516b41419a.JPG)
 ![1](https://user-images.githubusercontent.com/41403001/44778580-5dc00e80-abb8-11e8-91d9-901fbfccc224.JPG)
