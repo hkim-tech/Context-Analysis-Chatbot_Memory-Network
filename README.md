@@ -1,28 +1,29 @@
 # Context-Analysis-Chatbot_Memory-Network / 맥락 분석 챗봇
-  <p>
+
 <div>
+<p>
 한국인공지능연구소 1기 / 자연어처리 / AURA 팀<br>
 Korea Artificial Intelligence Laboratory 1st / Natural Language Processing / Team AURA
+</p>
 </div>
-  </p>
 <div>
-  <p>
+<p>
 <strong>현재 서버에 올라와 있는 앱은 학습모델이 적용이 되어있지 않습니다.</strong>
 데이터 학습 시간이 오래걸려  heroku boot timeout으로 인하여 Crashed 되었으니 이 점 참고하여 소스를 Clone 받으시고 직접 실행 시켜주시기 바랍니다.
 (aurabot보다 aurabot_save에서 server.py를 실행시키는 것이 더 빠릅니다.)
-      </p>
+</p>
 </div>
 <div>
   <p>
-<strong>Apps that are currently on the server are not covered by the learning model.<strong> Since the data learning time is long and it has been crashed due to heroku boot timeout, please clone the source and execute it manually. (It is faster to run server.py in aurabot_save folder than aurabot folder.)
+<strong>Apps that are currently on the server are not covered by the learning model.</strong> Since the data learning time is long and it has been crashed due to heroku boot timeout, please clone the source and execute it manually. (It is faster to run server.py in aurabot_save folder than aurabot folder.)
   </p>
 </div>
-
-
-- 아우라봇 링크: <https://aurabot.herokuapp.com>
-- 발표자료 링크: https://drive.google.com/open?id=1ipDY8ybgZ-iJGok4qqr9AaWIEK4atz_l
-- 한국인공지능연구소 1기 AURA 팀 링크: https://www.ai-lab.kr/labs/aura-raebjang-gimhyeonu
-
+<p>
+AuraBot is the name of this project chatbot.
+- 아우라봇 링크 / AuraBot Link: <https://aurabot.herokuapp.com>
+- 발표자료 링크 / Powerpoint(pdf) Link: https://drive.google.com/open?id=1ipDY8ybgZ-iJGok4qqr9AaWIEK4atz_l
+- 한국인공지능연구소 1기 AURA 팀 링크 / Lab-Aura Team Link: https://www.ai-lab.kr/labs/aura-raebjang-gimhyeonu
+    </p>
 # Screenshots
 ![default](https://user-images.githubusercontent.com/41403001/44778524-29e4e900-abb8-11e8-9646-ce516b41419a.JPG)
 ![1](https://user-images.githubusercontent.com/41403001/44778580-5dc00e80-abb8-11e8-91d9-901fbfccc224.JPG)
