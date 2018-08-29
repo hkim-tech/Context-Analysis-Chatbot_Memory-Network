@@ -20,7 +20,7 @@ Korea Artificial Intelligence Laboratory 1st / Natural Language Processing / Tea
 </div>
 <div>
   <p>
-AuraBot is the name of this project chatbot.
+**AuraBot is the name of this project chatbot.**
     
 - 아우라봇 링크 / AuraBot Link: <https://aurabot.herokuapp.com>
 - 발표자료 링크 / Powerpoint(pdf) Link: https://drive.google.com/open?id=1ipDY8ybgZ-iJGok4qqr9AaWIEK4atz_l
@@ -36,7 +36,11 @@ AuraBot is the name of this project chatbot.
 ## Background / 연구 배경
 한국인공지능연구소 1기 마지막 발표에서 자연어 처리로 팀원 모두 합심하여 할 수 있는 것을 찾던 중 챗봇을 처음부터 끝까지 만들어 보면 어떨까 하는 생각에서 이번 발표 주제를 챗봇으로 선정하였습니다.
 
-이번에 연구를 진행한 챗봇은 메모리 네트워크 모델로 구성된 상황인지 기반 챗봇으로 사람이 시나리오를 구성하는 방식이 아니라 무작위 수집한 데이터 내에서 관련 있는 맥락을 찾아 질문에 답하는 방식인 End To End 방식으로 구성되어 있습니다
+In the final announcement of the 1st Korea Institute of Artificial Intelligence, we decided to make the chatbot from the beginning to the end while looking for a project that all the team members could cooperate in natural language processing.
+
+이번에 연구를 진행한 챗봇은 메모리 네트워크 모델로 구성된 상황인지 기반 챗봇으로 사람이 시나리오를 구성하는 방식이 아니라 무작위 수집한 데이터 내에서 관련 있는 맥락을 찾아 질문에 답하는 방식인 End To End 방식으로 구성되어 있습니다.
+
+The chatbots that have been studied in this study are based on the memory network model, which is a context-based chatbot. It is not based on how a person configures scenarios but consists of an end-to-end method of locating related contexts in randomly collected data and answering questions .
 
 ## Technology / 기술 설명
 메모리 네트워크는 데이터를 메모리에 저장하여 맥락을 이해하여 질문에 대한 답을 하는 방식으로 사용자의 질문을 이용하여 맥락 정보를 선택하는 스토리 선택 모듈과 선택된 스토리 정보와 질문 정보로 답변을 선택하는 탑변 선택 모듈로 구성되어 있습니다.
