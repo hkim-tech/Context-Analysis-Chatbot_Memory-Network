@@ -1,8 +1,6 @@
 # BottlePy web programming micro-framework
 import bottle
 from bottle import request, route, template, get, post, delete
-# import urllib.request
-# from urllib.parse import urlencode
 import os
 import os.path
 import traceback
@@ -11,10 +9,6 @@ import socket
 
 hostname = socket.gethostname()
 IP = socket.gethostbyname(hostname)
-
-# # import answers
-# with open("answers.json", 'rt', encoding='UTF8') as f:
-#     answers = json.load(f)
 
 # import apps from subfolders
 for dir in os.listdir():
@@ -55,9 +49,6 @@ def index():
         return """<html><body>Nothing to see here... move along now.
         Or, create an index.html file.</body></html>"""
 
-
-
-
 from keras.models import Sequential, Model
 from keras.layers.embeddings import Embedding
 from keras.layers import Input, Activation, Dense, Permute, Dropout
@@ -75,9 +66,7 @@ from scipy.spatial import distance
 import json
 
 
-# # In[2]:
-
-
+# In[2]:
 def tokenize(sent):
     return [x.strip() for x in re.split(r'(\W+)?', sent) if x.strip()]
 
@@ -127,8 +116,6 @@ def vectorize_stories(data):
 
 
 # In[3]:
-
-
 data = 'aurabot'
 direc = './'
 train_stories = get_stories(codecs.open(direc + data + '.txt', 'r', 'utf-8'))
@@ -161,8 +148,6 @@ print('-')
 
 
 # In[4]:
-
-
 # 모델
 input_sequence = Input((story_maxlen,))
 question = Input((query_maxlen,))
@@ -200,10 +185,9 @@ model.compile(optimizer='rmsprop', loss='sparse_categorical_crossentropy', metri
 
 
 # In[5]:
-
 model.fit([inputs_train, queries_train], answers_train, batch_size=1, epochs=150)
 
-##---
+
 @route('/chat', method=['GET','POST'])
 def getUserMsg():
     msg = request.json.get('message')
@@ -275,17 +259,8 @@ json_data.close()
 an = 1  # 샘플로 처음 데이터를 불러옴
 print('Sample : ['+answers_data[an-1]['ID']+']', answers_data[an-1]['AN'])
 
-
 # In[8]:
-
-# while(True) :
-#     #대화 초기화
-# Input_Data = []
-# threshold = 0.9      #0.9
-# ref_threshold = 1.5      #1.5
-
-# np.random.seed(0)
-# In[9]:
+#맥락 별 중복해서 맥락 간 정확도 체크
 class InputAura:
     def __init__(self):
         self.Input_Data = []
@@ -385,99 +360,6 @@ class InputAura:
         return final_answer
 
 botAnswer = InputAura()
-#맥락 별 중복해서 맥락 간 정확도 체크
-# while(True) :
-#     Q = input('사용자질문 > ')
-
-    # try:
-    #     q_data = tokenize(Q)
-    #     ref_data,Input_Data_A = [], []
-    #     m_acc = []
-    #     results = []
-    #     result_no = 0
-    #     final_answer = None
-        
-    #     #맥락 flatten
-    #     Input_Data_F = [y for x in Input_Data for y in x]
-        
-    #     #맥락 없음
-    #     print('맥락정보 : 없음')
-    #     results.append(model.predict([v_s(tokenize('UNK'), story_maxlen), v_s(q_data, query_maxlen)]))
-    #     _, a = ref_result(results[0], results[0], mode='simple')     #detail / simple / none
-    #     m_acc.append(a)
-        
-    #     result_no += 1
-    #     print()
-
-    #     #각 맥락 별 결과 비교값
-    #     j = []
-    #     for i in Input_Data:
-    #         j.extend(i)
-    #         print('맥락정보 :', end="")
-    #         for f in j:
-    #             print(vocab[f-1], end=" ")
-    #         print()
-            
-    #         result = model.predict([pad_sequences([j], story_maxlen, truncating='post'), v_s(q_data, query_maxlen)])
-    #         a, b = ref_result(results[0], result, mode='simple')     #detail / simple / none
-            
-    #         if a < ref_threshold:
-    #             results.append(result)
-    #             m_acc.append(b)
-    #             result_no += 1
-    #         print()
-        
-    #     #순위 선정하기
-    #     rank_1 = np.argmax(m_acc)
-
-    #     for i in range(rank_1):
-    #         ref_data.append(Input_Data[i])
-
-    #     #무맥락 답변
-    #     print('무맥락답변 :', end=' ')
-    #     an_no, f_an_no = answer_result(results[0], threshold=threshold)
-    #     if an_no == False:
-    #         an_no, f_an_no = '무슨 뜻인지 모르겠어요', '무슨 뜻인지 모르겠어요'
-    #     print(an_no)
-
-    #     #최적맥락 답변
-    #     print('최적맥락답변 :', end=' ')
-    #     an_A, f_an_A = answer_result(results[rank_1], threshold=threshold)
-        
-    #     if an_A == False:
-    #         an_A, f_an_A = '무슨 뜻인지 모르겠어요', '무슨 뜻인지 모르겠어요'
-    #     print(an_A)
-
-    #     if ref_data == []:
-    #         final_answer = f_an_no
-    #     else:
-    #         final_answer = f_an_A
-
-    #     #이전 대화 저장하기
-    #     x_d = []
-    #     for i in v_s(q_data, query_maxlen):
-    #         for j in reversed(i):
-    #             if j != 0:
-    #                 x_d.insert(0, j)
-
-    #     Input_Data = ref_data + [x_d]
-
-    #     #종합
-    #     print("=================================")
-    #     print('질문 :',q_data)
-    #     print('전체맥락 :', end=" ")
-    #     for i in Input_Data_F:
-    #         print(vocab[i-1], end=" ")
-    #     print()
-    #     for i in answers_data:
-    #         if i['ID'] == final_answer.strip():
-    #             final_answer = i['AN']      
-    #     print("\033[1m\033[31m최종답변 :", final_answer)
-        
-    # except KeyError:
-    #     print('※ 사전에 있는 단어를 입력해 주세요.')
-    #     print(vocab)
-##
 
 # Launch the BottlePy dev server 
 import wsgiref.simple_server, os
