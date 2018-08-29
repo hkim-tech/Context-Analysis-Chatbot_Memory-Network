@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 # BottlePy web programming micro-framework
 import bottle
 from bottle import request, route, template, get, post, delete
@@ -11,10 +12,6 @@ import socket
 
 hostname = socket.gethostname()
 IP = socket.gethostbyname(hostname)
-
-# # import answers
-# with open("answers.json", 'rt', encoding='UTF8') as f:
-#     answers = json.load(f)
 
 # import apps from subfolders
 for dir in os.listdir():
@@ -54,9 +51,6 @@ def index():
     else:
         return """<html><body>Nothing to see here... move along now.
         Or, create an index.html file.</body></html>"""
-
-
-    
 
 from keras.models import load_model
 from keras.preprocessing.sequence import pad_sequences

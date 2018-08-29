@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <title>AURA</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="top-header">
+    <div class="header__top">
+      <div class="header__column">
+        <i class="fa fa-signal"> Aura</i>
+        <i class="fa fa-wifi"></i>
+      </div>
+      <div class="header__column">
+        <span class="header__time" id="clock">18:38</span>
+      </div>
+      <div class="header__column">
+        <span class="header__battery">100% <i class="fa fa-battery-full"></i></span>
+      </div>
+    </div>
+    <div class="header__bottom">
+      <div class="header__column">
+
+      </div>
+      <div class="header__column">
+        <span class="header__text">더보기</span>
+      </div>
+      <div class="header__column">
+      </div>
+    </div>
+  </header>
+  <main class="more">
+    <header class="more__header">
+      <div class="more-header__column">
+        <img src="images/khw.jpg" alt="">
+        <div class="more-header__info">
+          <h3 class="more-header__title">
+            랩장 / 김현우
+          </h3>
+          <span class="more-header__subtitle">
+            <a href="https://www.ai-lab.kr/labs/aura-raebjang-gimhyeonu">한국인공지능연구소 1기 AURA팀</a>
+          </span>
+        </div>
+      </div>
+      <i id="thumbs-up" class="fa fa-thumbs-o-up fa-2x" style="cursor: pointer;"></i>
+    </header>
+    <section class="more__options">
+      <div id="research-background" class="more__option" style="cursor: pointer;">
+          <i class="fa fa-flask fa-2x"></i>
+          <span class="more__option-title">연구배경</span>
+      </div>
+      <div id="skill-illustration" class="more__option" style="cursor: pointer;">
+          <i class="fa fa-cogs fa-2x"></i>
+          <span class="more__option-title">기술구현</span>
+      </div>
+      <div id="model-structure" class="more__option" style="cursor: pointer;">
+          <i class="fa fa-sitemap fa-2x"></i>
+          <span class="more__option-title">모델구조</span>
+      </div>
+    </section>
+    <section class="more__links" justify-content: space-around;>
+      <div class="more__option">
+          <i id="github" class="fa fa-github fa-3x" aria-hidden="true" style="cursor: pointer; color: #523737;"></i>
+          <span class="more__options-title">GitHub Page</span>
+          <br>
+          <p style="line-height:150%">
+            본 연구에서는 데이터 구성부터 클라이언트 구현까지
+            챗봇 구성을 위한 모든 프로세스를 다루며,
+            맥락을 이해하여 답변하는 End-to-End 챗봇의
+            Prototype 구현을 목적으로 하였습니다.
+          </p>
+      </div>
+    </section>  
+    <section class="more__plus-friends">
+      <header class="plus-friends__header">
+        <h2 class="plus-friends__title">MIT License</h2>
+        <span id="license" class="plus-friends__learn-more">
+          <i class="fa fa-info-circle"></i>
+          About
+        </span>
+      </header>
+        <p style="line-height:150%">
+          Copyright (c) 2018 Kim Hyunwoo, Min Hong, Park Sanhui, Jeon Eungwang, Hong Gwonil
+          <br><br>
+          Permission is hereby granted, free of charge, to any person obtaining a copy
+          of this software and associated documentation files (the "Software"), to deal
+          in the Software without restriction, including without limitation the rights
+          to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+          copies of the Software, and to permit persons to whom the Software is
+          furnished to do so, subject to the following conditions:
+          <br><br>
+          The above copyright notice and this permission notice shall be included in all
+          copies or substantial portions of the Software.
+          <br><br>
+          THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+          IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+          FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+          AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+          LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+          OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+          SOFTWARE.
+        </p>
+    </section>
+  </main>
+  <nav class="tab-bar">
+    <a href="index.html" class="tab-bar__tab">
+      <i class="fa fa-users"></i>
+      <span class="tab-bar__title">랩장/연구원</span>
+    </a>
+    <a href="chats.html" class="tab-bar__tab">
+      <i class="fa fa-comment"></i>
+      <span class="tab-bar__title">채팅</span>
+    </a>
+    <a href="index.html" class="tab-bar__tab">
+      <i class="fa fa-home"></i>
+      <span class="tab-bar__title">홈으로</span>
+    </a>
+  </nav>
+  <script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+  <script>
+    $('#thumbs-up').click(function(){
+      window.open('https://github.com/hkim-tech/aurabot');
+    })
+
+    $('#research-background').click(function(){
+      window.open('/further/research-background.pdf');
+    })
+    
+    $('#skill-illustration').click(function(){
+      window.open('/further/skill-illustration.pdf');
+    })
+
+    $('#model-structure').click(function(){
+      window.open('/further/model-structure.pdf');
+    })
+
+    $('#github').click(function(){
+      window.open('https://github.com/hkim-tech/aurabot');
+    })
+
+     $('#license').click(function(){
+      window.open('https://github.com/hkim-tech/aurabot/blob/master/LICENSE');
+    })
+    
+      function getNowTimeStamp(){
+        var date = new Date();
+        var hours = date.getHours();
+        var minutes = date.getMinutes();
+        var ampm = hours < 12 ? '오전' : '오후';
+        hours = hours === 0 ? 12 : hours;
+        hours = hours > 12 ? hours - 12 : hours;
+        minutes = minutes < 10 ? '0' + minutes : minutes;
+        return ampm + ' ' + hours + ':' + minutes;}
+        $("#clock").html(getNowTimeStamp());
+        setInterval(function(){
+          $("#clock").html(getNowTimeStamp());
+        }, 5000)
+   </script>
+</body>
+</html>
